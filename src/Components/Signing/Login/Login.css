@@ -1,0 +1,22 @@
+.login-container{
+    width: 400px;
+    border: 2px solid grey;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.form-group label{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.form-group input:not([name="checkbox"]){
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+}

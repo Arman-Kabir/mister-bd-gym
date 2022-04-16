@@ -7,7 +7,7 @@ import './Services.css';
 const Services = () => {
     
     const services = useServices();
-    // console.log(services);
+    console.log(services);
 
     return (
         <div>
