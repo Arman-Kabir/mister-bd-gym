@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `Dependencies I Used`
+### `Libraries I Used`
 
 
 Runs the app in the development mode.\

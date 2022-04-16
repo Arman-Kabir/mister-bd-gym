@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "price": "$2,681.36",
+        "image": "https://i.ibb.co/yQ2gVfv/mma.jpg",
+        "name": "Mixed martial Arts Training",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym. "
+    },
+    {
+        "id": "2",
+        "price": "$3,076.77",
+        "image": "https://i.ibb.co/LSYXGSR/running.jpg",
+        "name": "Running for breathing",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym."
+    },
+    {
+        "id": "3",
+        "price": "$2,548.94",
+        "image": "https://i.ibb.co/chgtjHr/weight-Training.jpg",
+        "name": "Weight Training",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym."
+    },
+    {
+        "id": "4",
+        "price": "$2,370.17",
+        "image": "https://i.ibb.co/7KLQ6CL/weight-Loss.jpg",
+        "name": "Weight Loss Training",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym.\r\n"
+    },
+    {
+        "id": "5",
+        "price": "$2,699.36",
+        "image": "https://i.ibb.co/cc8qt0Y/bodybuilding.jpg",
+        "name": "Bodybuilding",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym.\r\n"
+    },
+    {
+        "id": "6",
+        "price": "$3,251.65",
+        "image": "https://i.ibb.co/0YDDGxx/weight-Gain.jpg",
+        "name": "Weight Gain Program",
+        "description": "DOing gym for a regular basis is good for the health,body,mind and truly speaking overall everything. Our programs help u achieve everything what is possible from going to the gym.\r\n"
+    }
+]
