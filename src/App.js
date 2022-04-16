@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import About from "./Components/Pages/About/About";
 import Blogs from "./Components/Pages/Blogs/Blogs";
+import Checkout from "./Components/Pages/Checkout/Checkout";
 import Home from "./Components/Pages/Home/Home/Home";
 import Services from "./Components/Pages/Services/Services";
 import Header from "./Components/Shared/Header/Header";
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
-        <Route path="/service/:serviceId" element={<Services></Services>}></Route>
+        <Route path="/service/:serviceId" element={<Checkout></Checkout>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
       </Routes>
