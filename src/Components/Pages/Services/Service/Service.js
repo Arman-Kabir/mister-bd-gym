@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Checkout from '../../Checkout/Checkout';
 import './Service.css';
 
 const Service = ({ service }) => {
@@ -8,6 +9,10 @@ const Service = ({ service }) => {
 
     const handleService = id => {
         navigate(`/checkout/${id}`);
+        // <Checkout
+        // key={service.id}
+        // service={service}
+        // ></Checkout>
     }
 
     return (
