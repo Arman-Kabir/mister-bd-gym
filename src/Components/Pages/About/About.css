@@ -1,0 +1,24 @@
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.my-image img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.my-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.my-info{
+    padding-left: 35%;
+}
+.my-goal {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: start; */
+    align-items: center;
+}

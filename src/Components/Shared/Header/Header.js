@@ -31,6 +31,7 @@ const Header = () => {
                             <CustomLink className="m-2 text-decoration-none" to="/services">Services</CustomLink>
                             <CustomLink className="m-2 text-decoration-none" to="/blogs">Blogs</CustomLink>
                             <CustomLink className="m-2 text-decoration-none" to="/about">About</CustomLink>
+                            {/* <CustomLink className="m-2 text-decoration-none" to="/checkout/:${}">Checkout</CustomLink> */}
                         </Nav>
 
                         {
