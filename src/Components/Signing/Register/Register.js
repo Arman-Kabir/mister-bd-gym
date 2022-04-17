@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
@@ -76,6 +77,7 @@ const Register = () => {
                 </div>
 
             </form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

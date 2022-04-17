@@ -1,0 +1,18 @@
+.divider{
+    display: flex;
+    align-items: center;
+}
+.divider p{
+    margin: 10px ;
+    font-weight: bold;
+    color: aqua;
+}
+.left-divider,.right-divider{
+    height: 1px;
+    background-color: blue;
+    width: 45%;
+}
+.google-signin img{
+    width: 40px;
+    height: 40px;
+}

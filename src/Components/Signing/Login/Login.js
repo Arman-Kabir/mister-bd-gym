@@ -1,23 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const handleBlurEmail = event => {
+        setEmail(event.target.value);
+        // console.log(email);
+    }
+
+    const handleBlurPassword = event => {
+        setPassword(event.target.value);
+        // console.log(password);
+    }
+
+    if (user) {
+        console.log(user, 'user found');
+        navigate('/');
+    }
+
+    const handleLogin = async (event) => {
+        event.preventDefault();
+        console.log(email, password);
+        await signInWithEmailAndPassword(email, password);
+
+    }
+
     return (
         <div className='login-container'>
             <h2 className='text-center'>Login</h2>
-            <form action="">
+            <form action="" onSubmit={handleLogin}>
 
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="" />
+                    <input type="email" name="email" id="" onBlur={handleBlurEmail}/>
                 </div>
                 <br />
 
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="" />
+                    <input type="password" name="password" id="" onBlur={handleBlurPassword}/>
                 </div>
                 <br />
 
@@ -36,6 +71,7 @@ const Login = () => {
                 </div>
 
             </form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
