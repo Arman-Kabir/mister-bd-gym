@@ -7,7 +7,7 @@ const Service = ({ service }) => {
     const { id, name, price, description, image } = service;
 
     const handleService = id => {
-        navigate(`/service/${id}`);
+        navigate(`/checkout/${id}`);
     }
 
     return (

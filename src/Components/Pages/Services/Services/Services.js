@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import useServices from '../../../useServices/useServices';
-import Service from './Service/Service';
+import React from 'react';
+import useServices from '../../../../useServices/useServices';
+import Service from '../Service/Service';
 import './Services.css';
 
-
 const Services = () => {
-    
     const services = useServices();
     console.log(services);
 
@@ -20,7 +18,6 @@ const Services = () => {
                         service={service}
                     ></Service>)
                 }
-
             </div>
         </div>
     );

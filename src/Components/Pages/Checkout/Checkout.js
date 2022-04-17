@@ -4,11 +4,11 @@ import { useParams } from 'react-router-dom';
 
 const Checkout = () => {
     const params = useParams();
-    const { serviceId } = params;
+    const { cId } = params;
 
     return (
         <div>
-            <h2 className='text-center'>Checkout Page.{serviceId}</h2>
+            <h2 className='text-center'>Checkout Page.{cId}</h2>
         </div>
     );
 };
