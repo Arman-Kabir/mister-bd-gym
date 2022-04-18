@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
@@ -10,7 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
-
+    let errorElement;
     let from = location.state?.from?.pathname || "/";
 
     const [
@@ -19,6 +20,22 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    if (user) {
+        console.log(user, 'user found');
+        // navigate('/');
+        navigate(from, { replace: true });
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+    if (error) {
+        errorElement =
+            <div>
+                <p className='text-danger mt-2'>Error Occurred: <span className='fw-bold'>{error?.message}</span> </p>
+            </div>
+    }
 
     const handleBlurEmail = event => {
         setEmail(event.target.value);
@@ -30,22 +47,15 @@ const Login = () => {
         // console.log(password);
     }
 
-    if (user) {
-        console.log(user, 'user found');
-        // navigate('/');
-        navigate(from, { replace: true });
-    }
-
     const handleLogin = async (event) => {
         event.preventDefault();
         console.log(email, password);
         await signInWithEmailAndPassword(email, password);
-
     }
 
     return (
         <div className='login-container'>
-            <h2 className='text-center'>Login</h2>
+            <h2 className='text-center text-success'>Login</h2>
             <form action="" onSubmit={handleLogin}>
 
                 <div className="form-group">
@@ -62,18 +72,17 @@ const Login = () => {
 
                 <div className="form-group">
                     {/* <input type="checkbox" name="checkbox" id="" /> */}
-                    <span className='text-primary ps-3 text-cl'
+                    <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
                         onClick={() => navigate('/register')}
                     >New User? Go to Register </span>
                 </div>
                 <br />
 
                 <div className="form-group submit-btn">
-                    <button className='bg-primary border-0 text-white p-2'
-
-                    >Login</button>
+                    <button className='border-0'> <span className='login-btn'
+                    >Login</span> </button>
                 </div>
-
+                {errorElement}
             </form>
             <SocialLogin></SocialLogin>
         </div>

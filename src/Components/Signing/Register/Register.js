@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
-// import { createUserWithEmailAndPassword } from "firebase/auth";
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    let errorElement;
+    let from = location.state?.from?.pathname || "/";
 
+    // use create user with email and password
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    // use Send Email Verification
+    const [sendEmailVerification, sending, errorVerification] = useSendEmailVerification(auth);
+
 
     const handleBlurEmail = event => {
         setEmail(event.target.value);
@@ -28,15 +36,25 @@ const Register = () => {
     }
 
     if (user) {
-        console.log(user, 'user found');
-        navigate('/');
+        console.log(user, 'New User Registered');
+        // navigate('/');
+        navigate(from, { replace: true });
+    }
+    if (loading) {
+        return <Loading></Loading>
+    }
+    if(error){
+        errorElement =
+            <div>
+                <p className='text-danger my-0'>Error Occurred: <span className='fw-bold'>{error?.message}</span> </p>
+            </div>
     }
 
     const handleRegister = async (event) => {
         event.preventDefault();
         console.log(email, password);
         await createUserWithEmailAndPassword(email, password);
-
+        await sendEmailVerification();
     }
 
     return (
@@ -69,7 +87,7 @@ const Register = () => {
                     >Already Registered? Go to Login </span>
                 </div>
                 <br />
-
+                {errorElement}
                 <div className="form-group submit-btn">
                     <button className='bg-primary border-0 text-white p-2'
 
@@ -77,6 +95,7 @@ const Register = () => {
                 </div>
 
             </form>
+            
             <SocialLogin></SocialLogin>
         </div>
     );

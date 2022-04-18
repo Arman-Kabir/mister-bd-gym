@@ -4,10 +4,14 @@ import google from '../../../images/google.png';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
+import { Spinner } from 'react-bootstrap';
 
 const SocialLogin = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    let errorElement;
+    let loadingSpinner;
 
     let from = location.state?.from?.pathname || "/";
 
@@ -17,6 +21,15 @@ const SocialLogin = () => {
         console.log(user, 'google signed IN');
         // navigate('/services');
         navigate(from, { replace: true });
+    }
+    if (loading) {
+        loadingSpinner = <Spinner animation="grow" variant="info" />
+    }
+    if (error) {
+        errorElement =
+            <div>
+                <p className='text-danger mt-2'>Error Occurred: <span className='fw-bold'>{error?.message}</span> </p>
+            </div>
     }
 
     return (
@@ -28,9 +41,13 @@ const SocialLogin = () => {
             </div>
 
             <button onClick={() => signInWithGoogle()} className='google-signin d-block mx-auto border-0' >
-                <img src={google} alt="" />
-                <span className=''>SignInWithGoogle</span>
+                <div className='d-flex align-items-center justify-content-center'>
+                    <span className='mt-1'>{loadingSpinner}</span>
+                    <img src={google} alt="" />
+                    <span className=''>Sign In With Google</span>
+                </div>
             </button>
+            {errorElement}
         </div>
     );
 };
