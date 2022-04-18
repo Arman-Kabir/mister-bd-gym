@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -62,9 +64,9 @@ const Login = () => {
         // console.log('reset');
         if (email) {
             await sendPasswordResetEmail(email);
-            console.log('Sent email');
+            toast('Sent email');
         } else {
-            console.log('provide email');
+            toast('provide email');
         }
     }
 
@@ -96,6 +98,7 @@ const Login = () => {
                     <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
                         onClick={() => resetPassword()}
                     >Reset Password</span>
+                    <ToastContainer />
                 </div>
                 <br />
 
@@ -106,6 +109,7 @@ const Login = () => {
                 {errorElement}
             </form>
             <SocialLogin></SocialLogin>
+
         </div>
     );
 };
