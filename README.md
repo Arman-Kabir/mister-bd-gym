@@ -1,72 +1,32 @@
-# Getting Started with Create React App
+# Mister-bd-Gym
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `Necessary Links`
+* [Github Repository](https://github.com/programming-hero-web-course-4/independent-service-provider-Arman-Kabir).
 
-## Available Scripts
+* [Live Site](https://mister-bd-gym.web.app/).
 
-In the project directory, you can run:
 
 ### `Libraries I Used`
+* react-router-dom
+* react-bootstrap
+* react-firebase-hooks
+* react-firebase
+* react-toastify
 
+## `Short Description`
+    This project is about a Gym Website where a gym instructor introduces his gym facilities with the audience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    At the `Home`, a big banner representing some features of the Gym. Then some `Services` that the gym offers. After that, gym instructor introduces himself to the audience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    At `Services` page, All services of the gym is represented.
 
-### `npm test`
+    `checkout` page shows service detail of a specific service when the user clicks button from services section item. It rewuires the user to be logged in.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    `Blogs` page, shows some questions and answers.
 
-### `npm run build`
+    `About` page, shows a little details of the maker.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    `Login/Register` page is available . Situated on the top right side of the navbar. It desappears when a user login or registers and shows the `signout` button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    `checkout ` page is situated inside a protected route so users can't access without logging in.
 # independent-service-provider-Arman-Kabir
