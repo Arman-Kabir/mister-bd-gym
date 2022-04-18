@@ -1,0 +1,33 @@
+.instructions-container{
+    margin: 100px 0;
+}
+
+.instructions-box{
+    margin: 75px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.instructions-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instructions-image img{
+    width: 400px;
+    height: 500px;
+    border-radius: 10px; 
+}
+
+@media only screen and (max-width:992px){
+    .instructions-box{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .instructions-image img{
+        width: 80%;
+        height: 500px;
+        border-radius: 10px;
+        margin: 25px auto;
+
+    }
+}

@@ -24,8 +24,8 @@ const Checkout = () => {
         <div className='checkout-container container'>
             <div>
                 <h1 className='text-center fw-bold text-warning'>Checkout Page.</h1>
-                <p className='text-center'>Total Services: {services.length}</p>
-                <p className='text-center fs-4 fw-bold'>Checkout Id of checkout: {checkoutId}</p>
+                <p className='text-center fs-5 fw-bold'>Total Services: {services.length}</p>
+                <p className='text-center fs-4 fw-bold'>Checkout Id of checkout: <span className='text-danger'>{checkoutId}</span> </p>
             </div>
 
             <div className='checkout-details border-1 my-5'>

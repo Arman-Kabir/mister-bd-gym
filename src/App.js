@@ -5,6 +5,7 @@ import Blogs from "./Components/Pages/Blogs/Blogs";
 import Checkout from "./Components/Pages/Checkout/Checkout";
 import Home from "./Components/Pages/Home/Home/Home";
 import Services from "./Components/Pages/Services/Services/Services";
+import Footer from "./Components/Shared/Footer/Footer";
 import Header from "./Components/Shared/Header/Header";
 import NotFound from "./Components/Shared/NotFound/NotFound";
 import Login from "./Components/Signing/Login/Login";
@@ -41,6 +42,7 @@ function App() {
 
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
+        <Footer></Footer>
       </div >
     </ServicesContext.Provider>
   );

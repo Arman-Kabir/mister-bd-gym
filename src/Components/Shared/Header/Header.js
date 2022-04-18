@@ -16,10 +16,10 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar bg="black" expand="lg" >
+            <Navbar bg="black" expand="lg" fixed='top'>
                 <Container>
                     <Navbar.Brand to="#" className=''>
-                        <CustomLink to='/' className="text-decoration-none text-white fw-bolder text-center">Mister-bd-gym</CustomLink>
+                        <CustomLink to='/' className="text-decoration-none text-info fw-bolder text-center">Mister-bd-gym</CustomLink>
                     </Navbar.Brand>
 
                     <Navbar.Toggle aria-controls="navbarScroll" />

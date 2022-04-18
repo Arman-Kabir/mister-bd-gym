@@ -22,39 +22,39 @@ const Banner = () => {
         <div className='carousel-container'>
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
-                    <img
+                    <img style={{ opacity: '.9' }}
                         className="d-block w-100"
                         src={aesthetic1}
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>Mixed martial Art</h1>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h1 className='fw-bold text-danger shadow-lg'>Mixed martial Art</h1>
+                        <p className='fw-bold text-danger shadow-lg fs-5'>Learn MMA, be fit,strong, and grow confidence </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
+                    <img style={{ opacity: '.9' }}
                         className="d-block w-100"
                         src={aesthetic2}
                         alt="Second slide"
                     />
 
                     <Carousel.Caption>
-                        <h1>Running for breathing</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1 className='fw-bold text-danger shadow-lg'>Running for breathing</h1>
+                        <p className='fw-bold text-danger shadow-lg fs-5'>Running is One of the best to enhance breathing capability</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img
+                    <img style={{ opacity: '.9' }}
                         className="d-block w-100"
                         src={aesthetic3}
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h1>Weight Training for strength</h1>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        <h1 className='fw-bold text-danger shadow-lg'>Weight Training for strength</h1>
+                        <p className='fw-bold text-danger shadow-lg  fs-5'>
+                            Weight Training build your muscle and increase strength
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

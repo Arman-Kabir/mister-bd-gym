@@ -4,6 +4,7 @@ import './Blogs.css';
 const Blogs = () => {
     return (
         <div className='blogs-container container  '>
+            <h2 className='blogs-title'>Blogs</h2>
             <div className='blogs border border-success p-2 my-5'>
                 <h2 className='text-center text-info'>Difference between authorization and authentication</h2>
                 <p className='text-start text-muted fs-5 my-0'>Authentication comes before authorization. Authentication is the process of having knowledge of the identity of the user.This is the first step in any security process.</p>

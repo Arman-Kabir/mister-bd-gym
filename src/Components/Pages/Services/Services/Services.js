@@ -10,7 +10,7 @@ const Services = () => {
     return (
         // <ServicesContext.Provider value={services}>
             <div>
-                <h2 className='text-center'>Mister BD Gym's Services: <span className='text-info'>{services.length}</span> services</h2>
+                <h2 className='text-center text-info services-title'>Mister-BD-Gym Services: <span className='text-danger'>{services.length}</span> services</h2>
 
                 <div className='container services-container'>
                     {

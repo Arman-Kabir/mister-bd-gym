@@ -17,7 +17,7 @@ const Service = ({ service }) => {
 
     return (
         <div className='service-container'>
-            <h3 className='text-center'>{name}</h3>
+            <h3 className='text-center text-danger py-2'>{name}</h3>
 
 
             <div className='image-container'>
@@ -25,7 +25,7 @@ const Service = ({ service }) => {
             </div>
 
 
-            <p className='p-2 text-justify'>{description}</p>
+            <p className='p-3 text-justify text-muted'>{description}</p>
 
             <div className='d-flex justify-content-around align-items-center'>
                 <span className='fw-bold text-info'>{price}</span>
