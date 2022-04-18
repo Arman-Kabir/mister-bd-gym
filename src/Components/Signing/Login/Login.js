@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -20,6 +20,10 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending, errorReset] = useSendPasswordResetEmail(
+        auth
+    );
 
     if (user) {
         console.log(user, 'user found');
@@ -53,6 +57,17 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
     }
 
+    // Reset Password
+    const resetPassword = async () => {
+        // console.log('reset');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            console.log('Sent email');
+        } else {
+            console.log('provide email');
+        }
+    }
+
     return (
         <div className='login-container'>
             <h2 className='text-center text-success'>Login</h2>
@@ -71,10 +86,16 @@ const Login = () => {
                 <br />
 
                 <div className="form-group">
-                    {/* <input type="checkbox" name="checkbox" id="" /> */}
                     <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
                         onClick={() => navigate('/register')}
                     >New User? Go to Register </span>
+                </div>
+                <br />
+
+                <div className="form-group">
+                    <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
+                        onClick={() => resetPassword()}
+                    >Reset Password</span>
                 </div>
                 <br />
 
