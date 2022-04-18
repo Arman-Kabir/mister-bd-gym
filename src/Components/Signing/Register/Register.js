@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'rea
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
+import './Register.css';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -43,7 +44,7 @@ const Register = () => {
     if (loading) {
         return <Loading></Loading>
     }
-    if(error){
+    if (error) {
         errorElement =
             <div>
                 <p className='text-danger my-0'>Error Occurred: <span className='fw-bold'>{error?.message}</span> </p>
@@ -59,7 +60,7 @@ const Register = () => {
 
     return (
         <div className='login-container'>
-            <h2 className='text-center'>Register</h2>
+            <h2 className='text-center text-success'>Register</h2>
             <form action="" onSubmit={handleRegister}>
 
                 <div className="form-group">
@@ -70,32 +71,32 @@ const Register = () => {
 
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="" onBlur={handleBlurEmail} />
+                    <input type="email" name="email" id="" onBlur={handleBlurEmail} required/>
                 </div>
                 <br />
 
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="" onBlur={handleBlurPassword} />
+                    <input type="password" name="password" id="" onBlur={handleBlurPassword} required/>
                 </div>
                 <br />
 
                 <div className="form-group">
                     {/* <input type="checkbox" name="checkbox" id="" /> */}
-                    <span className='text-primary ps-3 text-cl'
+                    <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
                         onClick={() => navigate('/login')}
                     >Already Registered? Go to Login </span>
                 </div>
                 <br />
                 {errorElement}
                 <div className="form-group submit-btn">
-                    <button className='bg-primary border-0 text-white p-2'
+                    <button className='border-0 p-2 register-btn'
 
                     >Register</button>
                 </div>
 
             </form>
-            
+
             <SocialLogin></SocialLogin>
         </div>
     );

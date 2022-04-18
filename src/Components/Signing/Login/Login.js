@@ -77,13 +77,13 @@ const Login = () => {
 
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="" onBlur={handleBlurEmail} />
+                    <input type="email" name="email" id="" onBlur={handleBlurEmail} required/>
                 </div>
                 <br />
 
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="" onBlur={handleBlurPassword} />
+                    <input type="password" name="password" id="" onBlur={handleBlurPassword} required/>
                 </div>
                 <br />
 
@@ -95,7 +95,7 @@ const Login = () => {
                 <br />
 
                 <div className="form-group">
-                    <span className='text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
+                    <span className=' text-primary ps-3 text-cl swap-register d-block  text-center fw-bold text-info'
                         onClick={() => resetPassword()}
                     >Reset Password</span>
                     <ToastContainer />

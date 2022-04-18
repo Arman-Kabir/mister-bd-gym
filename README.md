@@ -26,7 +26,7 @@
 
     `About` page, shows a little details of the maker.
 
-    `Login/Register` page is available . Situated on the top right side of the navbar. It desappears when a user login or registers and shows the `signout` button.
+    `Login/Register` page is available . Situated on the top right side of the navbar. It desappears when a user login or registers and shows the `signout` button . In `login/register` page , i did `reset password` and `email verification` task.
 
     `checkout ` page is situated inside a protected route so users can't access without logging in.
 # independent-service-provider-Arman-Kabir

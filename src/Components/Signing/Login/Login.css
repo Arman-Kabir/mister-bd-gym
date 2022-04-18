@@ -16,20 +16,27 @@
     width: 100%;
     padding: 10px;
 }
-.login-btn{
-   background-color: black;
-   color:green;
-   padding: 6px 10px 8px;
-   border-radius: 10px;
-   font-weight: bold;
-   cursor: pointer;
+
+.login-btn {
+    background-color: black;
+    color: green;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
 
 }
+
+.login-btn:hover {
+    color: crimson;
+}
+
 .submit-btn {
     display: flex;
     justify-content: center;
-    
+
 }
-.swap-register{
+
+.swap-register {
     cursor: pointer;
 }
